@@ -1,7 +1,11 @@
 """Evaluate final hidden state (after all layers) for baseline comparison."""
 import sys
-sys.path.insert(0, "/home/yoo122333/capstone/chemberta_repro_final/code/bert-loves-chemistry")
-sys.path.insert(0, "/home/yoo122333/capstone/sparse_autoencoder")
+import os
+
+# Add project root to path
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(project_root, "code", "bert-loves-chemistry"))
+sys.path.insert(0, project_root)
 
 from sae_experiment import (
     SaeExperimentConfig,

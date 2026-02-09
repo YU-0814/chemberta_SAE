@@ -13,9 +13,12 @@ __pycache__/
 **/checkpoints/
 **/final/
 
-# Data files
+# Data files (exclude large files, but keep essential datasets)
 *.txt
-*.csv
+# Keep essential files
+!requirements.txt
+!data/BBBP.csv
+!data/bace.csv
 
 # Logs and runs
 logs/
